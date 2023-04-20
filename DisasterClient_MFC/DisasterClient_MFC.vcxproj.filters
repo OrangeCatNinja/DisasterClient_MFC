@@ -19,15 +19,21 @@
     <Filter Include="Dialog">
       <UniqueIdentifier>{69f4639e-f48c-4c29-9df9-f1c516368b57}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Tools">
+    <Filter Include="Util">
       <UniqueIdentifier>{e9055f5d-3c2a-46df-838d-f21380f99877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Params">
+      <UniqueIdentifier>{42a18ed0-da65-4449-8d1d-afa5f522ef24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic">
+      <UniqueIdentifier>{21ccbdbc-02a0-444b-8d56-0e7aeb4aa8be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Map">
+      <UniqueIdentifier>{444b0525-9a17-4d1f-84ee-1cdbce86b243}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DisasterClient_MFC.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DisasterClient_MFCDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -42,16 +48,43 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ParamsManager.h">
+      <Filter>Params</Filter>
+    </ClInclude>
+    <ClInclude Include="ParamDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMapCity.h">
+      <Filter>GameLogic\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="DataDefine.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DisasterClient_MFCDlg.h">
+      <Filter>GameLogic\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CityOperaDialog.h">
+      <Filter>GameLogic\Map</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DisasterClient_MFC.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DisasterClient_MFCDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamsManager.cpp">
+      <Filter>Params</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMapCity.cpp">
+      <Filter>GameLogic\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="DisasterClient_MFCDlg.cpp">
+      <Filter>GameLogic\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="CityOperaDialog.cpp">
+      <Filter>GameLogic\Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\DisasterClientMFC.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\cbutton1.bin">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>

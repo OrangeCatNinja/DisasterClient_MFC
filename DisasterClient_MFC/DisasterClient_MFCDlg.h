@@ -3,6 +3,14 @@
 //
 
 #pragma once
+#include "GameMapCity.h"
+
+class GameMapCity;
+
+namespace GameLogic
+{
+namespace GameMap
+{
 
 
 // CDisasterClientMFCDlg 对话框
@@ -31,4 +39,17 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+
+private:
+	bool InitMap();
+
+private:
+	void CreateCity(const SCityInfo& cityInfo);
+	void DrawCityLine(CPaintDC& dc);
+
+private:
+	std::unordered_map<WORD, GameMapCity*> m_mapCityInfo;
 };
+
+}
+}

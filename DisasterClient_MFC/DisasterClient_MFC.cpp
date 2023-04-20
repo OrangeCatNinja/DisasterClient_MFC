@@ -6,6 +6,7 @@
 #include "framework.h"
 #include "DisasterClient_MFC.h"
 #include "DisasterClient_MFCDlg.h"
+#include "ParamsManager.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -40,9 +41,29 @@ CDisasterClientMFCApp theApp;
 
 BOOL CDisasterClientMFCApp::InitInstance()
 {
+	if (!Param::CParamsManager::GetInstance().InitParam())
+	{
+		return FALSE;
+	}
+
+	if (!InitMFC())
+	{
+		return FALSE;
+	}
+
+	//if(!NetWorkManager::GetInstance().InitNetWork())
+	//{
+	//	return FALSE;
+	//}
+	
+	return TRUE;
+}
+
+bool CDisasterClientMFCApp::InitMFC()
+{
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
-	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
-	//则需要 InitCommonControlsEx()。  否则，将无法创建窗口。
+// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
+//则需要 InitCommonControlsEx()。  否则，将无法创建窗口。
 	INITCOMMONCONTROLSEX InitCtrls;
 	InitCtrls.dwSize = sizeof(InitCtrls);
 	// 将它设置为包括所有要在应用程序中使用的
@@ -77,7 +98,7 @@ BOOL CDisasterClientMFCApp::InitInstance()
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
-	CDisasterClientMFCDlg dlg;
+	GameLogic::GameMap::CDisasterClientMFCDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

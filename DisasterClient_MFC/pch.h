@@ -10,5 +10,11 @@
 // 添加要在此处预编译的标头
 #include "framework.h"
 #include <vector>
+#include <unordered_map>
+#include <string>
+#include <list>
+#include <map>
+#include <afxwin.h>
+#include <unordered_set>
 
 #endif //PCH_H

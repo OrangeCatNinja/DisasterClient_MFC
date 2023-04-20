@@ -27,6 +27,14 @@ public:
 // 实现
 
 	DECLARE_MESSAGE_MAP()
+
+private:
+	//MFC部分的初始化
+	bool InitMFC();
+	//网络部分的初始化
+	bool InitNetWork();
+	//参数部分的初始化
+	bool InitParams();
 };
 
 extern CDisasterClientMFCApp theApp;
