@@ -66,6 +66,15 @@
     <ClInclude Include="CityOperaDialog.h">
       <Filter>GameLogic\Map</Filter>
     </ClInclude>
+    <ClInclude Include="NetWorkBase.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeNetWork.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWorkManager.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DisasterClient_MFC.cpp">
@@ -85,6 +94,15 @@
     </ClCompile>
     <ClCompile Include="CityOperaDialog.cpp">
       <Filter>GameLogic\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWorkBase.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="NativeNetWork.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWorkManager.cpp">
+      <Filter>NetWork</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

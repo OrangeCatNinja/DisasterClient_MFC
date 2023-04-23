@@ -201,6 +201,9 @@
     <ClInclude Include="DisasterClient_MFCDlg.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="GameMapCity.h" />
+    <ClInclude Include="NativeNetWork.h" />
+    <ClInclude Include="NetWorkBase.h" />
+    <ClInclude Include="NetWorkManager.h" />
     <ClInclude Include="ParamDefine.h" />
     <ClInclude Include="ParamsManager.h" />
     <ClInclude Include="pch.h" />
@@ -212,6 +215,9 @@
     <ClCompile Include="DisasterClient_MFC.cpp" />
     <ClCompile Include="DisasterClient_MFCDlg.cpp" />
     <ClCompile Include="GameMapCity.cpp" />
+    <ClCompile Include="NativeNetWork.cpp" />
+    <ClCompile Include="NetWorkBase.cpp" />
+    <ClCompile Include="NetWorkManager.cpp" />
     <ClCompile Include="ParamsManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
