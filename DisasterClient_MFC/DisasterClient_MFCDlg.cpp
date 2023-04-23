@@ -9,6 +9,7 @@
 #include "afxdialogex.h"
 
 #include "ParamsManager.h"
+#include "NetWorkManager.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -107,6 +108,8 @@ namespace GameLogic
 		ShowWindow(SW_MAXIMIZE);
 
 		// TODO: 在此添加额外的初始化代码
+		NetWork::SHttpRequestMessage message;
+		GETNETWORK()->SendMessage(message);
 
 		if (!InitMap())
 			return FALSE;

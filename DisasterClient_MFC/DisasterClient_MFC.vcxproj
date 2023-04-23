@@ -230,6 +230,7 @@
     <ResourceCompile Include="DisasterClientMFC.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="res\cbutton1.bin" />
     <None Include="res\DisasterClientMFC.rc2" />
   </ItemGroup>

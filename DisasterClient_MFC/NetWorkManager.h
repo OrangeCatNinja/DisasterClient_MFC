@@ -22,6 +22,8 @@ public:
 
 	NetWorkBase* GetNetWork() { return m_pNetWork; }
 
+	//void SendMessage(const SHttpRequestMessage& messge);
+
 private:
 	NetWorkManager();
 	~NetWorkManager() = default;

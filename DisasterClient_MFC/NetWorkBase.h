@@ -16,12 +16,12 @@ namespace NetWork
 
 	struct SHttpRequestLine
 	{
-
+		std::string m_method;
 	};
 
 	struct SHttpRequestHead
 	{
-
+		std::unordered_map<std::string, std::string> m_headMap;
 	};
 
 	struct SHttpRequestBody
@@ -32,7 +32,9 @@ namespace NetWork
 
 	struct SHttpRequestMessage
 	{
-		SHttpRequestBody m_bodyData;
+		SHttpRequestLine m_reqLine;
+		SHttpRequestHead m_reqHead;
+		SHttpRequestBody m_reqBody;
 	};
 
 	struct SHttpResponseMessage
@@ -47,7 +49,10 @@ public:
 	virtual ~NetWorkBase() = default;
 
 	virtual void InitNetWork() = 0;
-	bool SendMessage(const SHttpRequestMessage& message);
+	
+	virtual void Disconnect() = 0;
+
+	virtual bool SendMessage(const SHttpRequestMessage& message) = 0;
 
 public:
 	static const std::string m_sServerAddr;

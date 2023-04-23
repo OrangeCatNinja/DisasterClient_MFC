@@ -7,6 +7,7 @@
 #include "DisasterClient_MFC.h"
 #include "DisasterClient_MFCDlg.h"
 #include "ParamsManager.h"
+#include "NetWorkManager.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -51,10 +52,11 @@ BOOL CDisasterClientMFCApp::InitInstance()
 		return FALSE;
 	}
 
-	//if(!NetWorkManager::GetInstance().InitNetWork())
-	//{
-	//	return FALSE;
-	//}
+	if(!NetWork::NetWorkManager::GetInstance().CreateNetWork(NetWork::enNative))
+	{
+		return FALSE;
+	}
+	GETNETWORK()->InitNetWork();
 	
 	return TRUE;
 }
