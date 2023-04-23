@@ -16,5 +16,6 @@
 #include <map>
 #include <afxwin.h>
 #include <unordered_set>
+#include <functional>  
 
 #endif //PCH_H

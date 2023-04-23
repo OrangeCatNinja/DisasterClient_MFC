@@ -2,6 +2,8 @@
 
 namespace NetWork
 {
+	using OnResponseHandle = std::function<bool(const std::string&)>;
+
 	extern const std::stringstream strRequestLine;
 
 	extern const std::stringstream strResponseLine;
@@ -52,7 +54,7 @@ public:
 	
 	virtual void Disconnect() = 0;
 
-	virtual bool SendMessage(const SHttpRequestMessage& message) = 0;
+	virtual bool SendToServer(const SHttpRequestMessage& message, OnResponseHandle onHandle) = 0;
 
 public:
 	static const std::string m_sServerAddr;

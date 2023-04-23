@@ -109,7 +109,7 @@ namespace GameLogic
 
 		// TODO: 在此添加额外的初始化代码
 		NetWork::SHttpRequestMessage message;
-		GETNETWORK()->SendMessage(message);
+		GETNETWORK()->SendToServer(message, CDisasterClientMFCDlg::OnRespInit);
 
 		if (!InitMap())
 			return FALSE;
@@ -221,6 +221,11 @@ namespace GameLogic
 				dc.LineTo(adPs);
 			}
 		}
+	}
+
+	bool CDisasterClientMFCDlg::OnRespInit(const std::string& response)
+	{
+		return true;
 	}
 
 }

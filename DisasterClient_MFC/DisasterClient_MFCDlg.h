@@ -48,6 +48,10 @@ private:
 	void DrawCityLine(CPaintDC& dc);
 
 private:
+	//处理http应答报文的方法
+	bool OnRespInit(const std::string& response);
+
+private:
 	std::unordered_map<WORD, GameMapCity*> m_mapCityInfo;
 };
 

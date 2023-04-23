@@ -12,7 +12,7 @@ public:
 
 	void Disconnect() override;
 
-	bool SendMessage(const SHttpRequestMessage& message) override;
+	bool SendToServer(const SHttpRequestMessage& message, OnResponseHandle onHandle) override;
 private:
 	SOCKET m_scoket;
 };

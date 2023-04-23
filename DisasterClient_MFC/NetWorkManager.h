@@ -1,6 +1,8 @@
 #pragma once
 #include "NetWorkBase.h"
 
+#define GETNETWORK()	NetWork::NetWorkManager::GetInstance().GetNetWork()
+
 class NetWorkBase;
 
 namespace NetWork

@@ -14,7 +14,6 @@
 // CDisasterClientMFCApp:
 // 有关此类的实现，请参阅 DisasterClient_MFC.cpp
 //
-#define GETNETWORK()	NetWork::NetWorkManager::GetInstance().GetNetWork()
 
 class CDisasterClientMFCApp : public CWinApp
 {

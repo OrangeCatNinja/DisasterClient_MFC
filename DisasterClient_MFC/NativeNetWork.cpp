@@ -17,8 +17,8 @@ namespace NetWork
 			ERROR("failed to create socket");
 		}
 
-		sockaddr_in server_addr;
-		std::memset(&server_addr, 0, sizeof(server_addr));
+		struct sockaddr_in server_addr;
+		//std::memset(&server_addr, 0, sizeof(server_addr));
 		server_addr.sin_family = AF_INET;
 		server_addr.sin_addr.S_un.S_addr = inet_addr(m_sServerAddr.c_str());
 		server_addr.sin_port = htons(m_sPort);
@@ -34,7 +34,7 @@ namespace NetWork
 		closesocket(m_scoket);
 	}
 
-	bool NativeNetWork::SendMessage(const SHttpRequestMessage & message)
+	bool NativeNetWork::SendToServer(const SHttpRequestMessage & message, OnResponseHandle onHandle)
 	{
 		std::stringstream ss;
 
@@ -72,5 +72,7 @@ namespace NetWork
 		{
 			ERROR("Failed recv message");
 		}
+
+		return onHandle(response);
 	}
 }
